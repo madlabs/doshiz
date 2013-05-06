@@ -9,7 +9,7 @@ a todo list
 1.input field
 
 2.list of all things inputted
-	*sort
+*	sort
 		*toggle between priority and date added (age)
 		*reverse current list sort
 	*actions
