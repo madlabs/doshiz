@@ -10,24 +10,24 @@ a todo list
 
 2.list of all things inputted
 *	sort
-		*toggle between priority and date added (age)
-		*reverse current list sort
-	*actions
-		*mark as complete
-		*delete item
-		*edit item delete and throw to top
-		*view prioritization by element color
+*	toggle between priority and date added (age)
+*	reverse current list sort
+*	actionable
+	*	mark as complete
+	*	delete item
+	*	edit item delete and throw to top
+	*	view prioritization by element color
 
-3. prioitization
-	*color (red orange or yellow)
- 	*date added (position in the data array)
- 	*date added as text
+3. prioritization
+*	color (preset)
+*	date added (position in the data array)
+*	date added as text
 
 4. list of things that are done
-	*always sort by newest to oldest
-	*date completed
-	*no prioritization color
-	*no delete
+*	always sort by newest to oldest
+*	date completed
+*	no prioritization color
+*	no delete
 
 5. create new
 
