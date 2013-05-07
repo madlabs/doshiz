@@ -1,22 +1,81 @@
-init function
+$(init);
+
+var data;
+
+function init(){
+	//init function
+	if(!testLocalStorage)
+		return fail("Local storage not supported! Fail!");
+	data = loadData();
+}
 
 
-load function
-	load in local json object
+function loadData(){
+	var dataOb = localStorage.getItem("data");
+	if(dataOb == null || dataOf == undefined )
+		dataOb = createData();
+	return dataOb;
+}
 
-build function
-	reads directly from local json object
+function createData(){
+	var dataOb = {
+					"meta":
+					{
+						"colors":
+						[
+							"#00FF00",
+							"#FFFF00",
+							"#FF0000"
+						],
+						"date-created":"",
+						"last-updated":""
+					},
 
-edit function
-	modifies local json object
+					"items":
+					[
+						{ 
+							"priority":"",
+							"open":"",
+							"date":"",
+							"task":""
+						},
+					]
 
-save function 
-	saves local json file to the cloud (local storage)
+				}
+	return dataOb;
+}
+
+function testLocalStorage(){
+	try {
+	    return 'localStorage' in window && window['localStorage'] !== null;
+	} catch (e) {
+    	return false;
+  	}
+}
+
+function fail(message){
+	alert(message);
+}
+
+function buildTemplates(){
+	//loop through data object and seperate into two template types
+}
+
+function updateData(dataOb,index){
+	if(index == undefined || items[index] == undefined)
+		data.items.push(dataOb);
+	else
+		data.items[index] = dataOb;
+}
+
+function saveData(){
+	localStorage.setItem("data", data);
+}
 
 
 //structure json file that data gets thrown into
 
-"data":	
+/*
 {
 
 	"meta":
@@ -40,6 +99,6 @@ save function
 	]
 
 }
-
+*/
 
 
