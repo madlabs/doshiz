@@ -3,7 +3,7 @@
 <head>
 	<title>DO SHIZ</title>
 	<link rel="stylesheet" type="text/css" href="src/styles.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="src/jquery-min.js"></script>
 	<script type="text/javascript" src="src/scripts.js"></script>
 </head>
 <body>
@@ -12,9 +12,9 @@
 		<div id="input" class="shiz-container">
 			<input type="text"/>
 			<div id="save-btn">
-				<a href="#">green</a>
-				<a href="#">yellow</a>
-				<a href="#">red</a>
+				<a data-priority="0" href="#">green</a>
+				<a data-priority="1" href="#">yellow</a>
+				<a data-priority="2" href="#">red</a>
 			</div>
 		</div>
 		<div id="in-progress" class="shiz-container"></div>
@@ -23,19 +23,3 @@
 	<footer></footer>
 </body>
 </html>
-
-<!-- for future use -->
-<!-- open ones -->
-<div class="shiz open priority-0">
-	<div class="task"></div>
-	<div class="complete-btn"></div>
-	<div class="edit-btn"></div>
-	<div class="delete-btn"></div>
-	<div class="date"></div>
-</div>
-
-<!--completed ones -->
-<div class="shiz complete priority-0">
-	<div class="task"></div>
-	<div class="date"></div>
-</div>
